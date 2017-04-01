@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar">
         <el-menu :default-active="onRoutes" class="el-menu-vertical-demo" theme="dark" unique-opened router>
-            <el-menu-item index="DashBoard">
+            <el-menu-item index="Index">
 
                     <span class="sb-icon"><i class="material-icons">home</i></span>
                     <span class="sb-cn">DashBoard</span>
@@ -17,6 +17,11 @@
                 <el-menu-item index="RIB">RIB表</el-menu-item>
                 <el-menu-item index="PIB">PIB表</el-menu-item>
             </el-submenu>
+
+          <el-menu-item index="Configuration">
+            <span class="sb-icon"><i class="material-icons">build</i></span>
+            <span class="sb-cn">Configuration</span>
+          </el-menu-item>
             <!--
             <el-submenu index="2">
                 <template slot="title">

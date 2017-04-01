@@ -2,10 +2,11 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/components/common/Home';
 import DashBoard from '@/components/page/DashBoard';
+import Index from '@/components/page/Index';
 import NIB from '@/components/IB/NIB';
 import RIB from '@/components/IB/RIB';
 import PIB from '@/components/IB/PIB';
-
+import Configuration from '@/components/page/Configuration';
 
 // import AmCharts from '@/components/page/BasicCharts';
 // import FormInput from '@/components/page/FormInput';
@@ -26,14 +27,22 @@ export default new Router({
       path: '/',
       component: Home,
       children:[
+        // {
+        //   path:'',
+        //   component:DashBoard
+        // },
         {
           path:'',
-          component:DashBoard
+          component:Index
         },
         {
-          path:'/DashBoard',
-          component:DashBoard
+          path:'/Index',
+          component:Index
         },
+        // {
+        //   path:'/DashBoard',
+        //   component:DashBoard
+        // },
         {
           path:'/NIB',
           component:NIB
@@ -45,6 +54,10 @@ export default new Router({
         {
           path:'/PIB',
           component:PIB
+        },
+        {
+          path:'/Configuration',
+          component:Configuration
         },
         /*
         {
