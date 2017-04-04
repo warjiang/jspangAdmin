@@ -7,6 +7,7 @@ import NIB from '@/components/IB/NIB';
 import RIB from '@/components/IB/RIB';
 import PIB from '@/components/IB/PIB';
 import Configuration from '@/components/page/Configuration';
+import ovsflow from '@/components/NetworkGraph/ovsflow';
 
 // import AmCharts from '@/components/page/BasicCharts';
 // import FormInput from '@/components/page/FormInput';
@@ -58,6 +59,10 @@ export default new Router({
         {
           path:'/Configuration',
           component:Configuration
+        },
+        {
+          path:'ovsflow/:id',
+          component:ovsflow
         },
         /*
         {
