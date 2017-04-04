@@ -1,5 +1,5 @@
 <template>
-   <el-table :data="switchData" style="width: 100%" border stripe>
+   <el-table :data="switchData" style="width: 100%;cursor: pointer;" border stripe  @row-click="gotoFlows">
       <el-table-column prop="id"  label="id" width="80"></el-table-column>
       <el-table-column prop="DPID" label="DPID" width=""></el-table-column>
       <el-table-column prop="inetAddress" label="内部地址" width="160"></el-table-column>
@@ -33,6 +33,16 @@
         });
 
         return data;
+      },
+      methods:{
+          gotoFlows:function(row, event, column){
+            let dpid = row['DPID'];
+            //console.log(dpid);
+            let url = `/ovsflow/${dpid}`;
+            //console.log(url);
+            window.location.href = url;
+
+          }
       }
     }
 </script>
